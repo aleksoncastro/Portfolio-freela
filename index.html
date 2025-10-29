@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alêkson Castro de Souza</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Header/Navigation -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <h2>Alêkson Castro de Souza</h2>
+                <p class="subtitle">Designer & Desenvolvedor</p>
+            </div>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="hero-title">Olá, eu sou um desenvolvedor criativo</h1>
+            <p class="hero-description">
+                Especializado em criar experiências digitais únicas e funcionais.
+                Transformo ideias em realidade através de design minimalista e código limpo.
+            </p>
+            <a href="#projetos" class="btn-primary">Ver Trabalhos</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="sobre" class="section about">
+        <div class="container">
+            <div class="image-profile">
+                <img src="./assets/perfil/aleksoncastro_perfil.jpeg">
+            </div>
+            <h2 class="section-title">Sobre Mim</h2>
+            <div class="about-content">
+                <p>
+                    Sou um profissional apaixonado por criar soluções digitais que combinam
+                    estética e funcionalidade. Com experiência em design e desenvolvimento,
+                    trabalho com clientes de diversos segmentos para entregar projetos que superam expectativas.
+                </p>
+                <p>
+                    Minha abordagem é focada em entender as necessidades do cliente e traduzir, em sistemas complexos e
+                    em
+                    isso em interfaces intuitivas e experiências memoráveis.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projetos" class="section projects">
+        <div class="container">
+            <h2 class="section-title">Projetos Selecionados</h2>
+            <div class="projects-grid">
+                <article class="project-card" onclick="openGallery(0)">
+                    <div class="project-image">
+                        <img src="./assets/ecommerce_placasv/home.png?height=400&width=600" alt="Projeto 1">
+                    </div>
+                    <div class="project-info">
+                        <h3>E-commerce Moderno</h3>
+                        <p>Plataforma completa de vendas online com design responsivo e experiência otimizada.</p>
+                        <div class="project-tags">
+                            <span class="tag">UI/UX</span>
+                            <span class="tag">Angular</span>
+                            <span class="tag">TypeScript</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card" onclick="openGallery(1)">
+                    <div class="project-image">
+                        <img src="./assets/api_java/uml-tp1.png" alt="Projeto 2">
+                    </div>
+                    <div class="project-info">
+                        <h3>Sistema de Ecommerce</h3>
+                        <p>Sistema de Ecommerce feito em JAVA utilizando framework Quarkus, apresenta fluxo completo de
+                            venda</p>
+                        <div class="project-tags">
+                            <span class="tag">Web</span>
+                            <span class="tag">Quarksu</span>
+                            <span class="tag">Java</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card" onclick="openGallery(2)">
+                    <div class="project-image">
+                        <img src="./assets/lp_contabilidade/01.png" alt="Projeto 3">
+                    </div>
+                    <div class="project-info">
+                        <h3>Site Corporativo</h3>
+                        <p>Website empresarial com foco em conversão e identidade visual marcante e minimalista.</p>
+                        <div class="project-tags">
+                            <span class="tag">Branding</span>
+                            <span class="tag">Web</span>
+                            <span class="tag">HTML/CSS</span>
+                            <span class="tag">JS</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== Modal da Galeria ====== -->
+    <div id="galleryModal" class="modal">
+        <span class="close" onclick="closeGallery()">&times;</span>
+        <img id="galleryImage" class="modal-content" src="" alt="Imagem do Projeto">
+        <div class="modal-controls">
+            <button onclick="prevImage()">&#10094;</button>
+            <button onclick="nextImage()">&#10095;</button>
+        </div>
+    </div>
+
+    <!-- Skills Section -->
+    <section id="habilidades" class="section skills">
+        <div class="container">
+            <h2 class="section-title">Habilidades</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Design</h3>
+                    <ul>
+                        <li>UI/UX Design</li>
+                        <li>Figma</li>
+                        <li>Prototipagem</li>
+                        <li>Design Systems</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Desenvolvimento</h3>
+                    <ul>
+                        <li>HTML, CSS, JavaScript</li>
+                        <li>React & Angular</li>
+                        <li>TS & JS</li>
+                        <li>Responsive Design</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contato" class="section contact">
+        <div class="container">
+            <h2 class="section-title">Vamos Trabalhar Juntos?</h2>
+            <p class="contact-intro">
+                Estou sempre aberto a novos projetos e oportunidades.
+                Entre em contato e vamos criar algo incrível!
+            </p>
+            <div class="contact-methods">
+                <a href="mailto:aleksontrabalho@gmail.com" class="contact-link">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                    aleksontrabalho@email.com
+                </a>
+                <a href="https://www.linkedin.com/in/alekson-castro-de-souza-909950382" target="_blank"
+                    class="contact-link">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                    </svg>
+                    LinkedIn
+                </a>
+                <a href="https://github.com/aleksoncastro" target="_blank" class="contact-link">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                    </svg>
+                    GitHub
+                </a>
+                <a href="https://wa.me/5563985001993" target="_blank" class="contact-link">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.472-.148-.67.15s-.767.967-.94 1.166c-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.474-.883-.788-1.48-1.761-1.654-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.149-.67-1.611-.916-2.205-.242-.579-.487-.5-.67-.51l-.573-.01c-.198 0-.52.074-.793.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.1 3.2 5.086 4.487.711.307 1.265.491 1.698.63.713.227 1.362.195 1.875.118.572-.085 1.758-.718 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.615h-.004a8.902 8.902 0 01-4.54-1.241l-.325-.193-3.366.883.898-3.28-.211-.336a8.903 8.903 0 01-1.37-4.787c.001-4.918 4.005-8.92 8.942-8.92 2.387 0 4.633.933 6.324 2.624a8.835 8.835 0 012.616 6.311c-.003 4.919-4.006 8.921-8.944 8.921m7.645-16.566A10.682 10.682 0 0012.05 0C5.495 0 .16 5.332.157 11.892c0 2.096.547 4.142 1.588 5.943L0 24l6.305-1.654a11.86 11.86 0 005.73 1.459h.005c6.554 0 11.89-5.332 11.893-11.892a11.82 11.82 0 00-3.456-8.372z" />
+                    </svg>
+                    WhatsApp
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Seu Nome. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
