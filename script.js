@@ -121,13 +121,15 @@ const galleries = [
     "./assets/ecommerce_placasv/recibo_compra.jpeg",
     "./assets/ecommerce_placasv/recibo_compra2.jpeg",
     "./assets/ecommerce_placasv/detalhes_pedido.jpeg",
+    "./assets/ecommerce_placasv/pastas_front.jpeg"
 
 
   ],
   [
     "./assets/api_java/uml-tp1.png",
     "./assets/api_java/api01.png",
-    "./assets/api_java/api02.png"
+    "./assets/api_java/api02.png",
+    "./assets/api_java/pastas_api.jpeg"
   ],
   [
     "./assets/lp_contabilidade/01.png",
