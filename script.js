@@ -111,7 +111,18 @@ const galleries = [
   [
     "./assets/ecommerce_placasv/home.png",
     "./assets/ecommerce_placasv/produtos.png",
-    "./assets/ecommerce_placasv/produto_details.png"
+    "./assets/ecommerce_placasv/produto_details.png",
+    "./assets/ecommerce_placasv/register.png",
+    "./assets/ecommerce_placasv/cadastro_cliente.jpeg",
+    "./assets/ecommerce_placasv/perfil_usuario.jpeg",
+    "./assets/ecommerce_placasv/carrinho_compra.jpeg",
+    "./assets/ecommerce_placasv/resumo_pedido.jpeg",
+    "./assets/ecommerce_placasv/pagamento.jpeg",
+    "./assets/ecommerce_placasv/recibo_compra.jpeg",
+    "./assets/ecommerce_placasv/recibo_compra2.jpeg",
+    "./assets/ecommerce_placasv/detalhes_pedido.jpeg",
+
+
   ],
   [
     "./assets/api_java/uml-tp1.png",
