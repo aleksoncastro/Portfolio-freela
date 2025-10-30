@@ -6,26 +6,26 @@
 }
 
 :root {
-    --color-bg: #0a0a0a;
-    --color-surface: #1a1a1a;
-    --color-surface-hover: #252525;
-    --color-text: #e5e5e5;
-    --color-text-secondary: #a0a0a0;
-    --color-accent: #3b82f6;
-    --color-accent-hover: #2563eb;
-    --color-border: #2a2a2a;
+  --color-bg: #0a0a0a;
+  --color-surface: #1a1a1a;
+  --color-surface-hover: #252525;
+  --color-text: #e5e5e5;
+  --color-text-secondary: #a0a0a0;
+  --color-accent: #3b82f6;
+  --color-accent-hover: #2563eb;
+  --color-border: #2a2a2a;
 
-    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    --font-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Courier New', monospace;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "SF Mono", Monaco, "Cascadia Code", "Courier New", monospace;
 
-    --spacing-xs: 0.5rem;
-    --spacing-sm: 1rem;
-    --spacing-md: 2rem;
-    --spacing-lg: 4rem;
-    --spacing-xl: 6rem;
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 4rem;
+  --spacing-xl: 6rem;
 
-    --radius: 0.5rem;
-    --transition: all 0.3s ease;
+  --radius: 0.5rem;
+  --transition: all 0.3s ease;
 }
 
 /* Base Styles */
@@ -526,41 +526,133 @@ body {
 }
 
 .image-profile {
-    display: flex;
-    justify-content: center;
-    /* centraliza horizontalmente */
-    margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 1;
 }
 
+/* Efeitos circulares removidos - ondas agora cobrem toda a seção */
+
 .image-profile img {
-    width: 500px;
-    /* tamanho padrão */
-    height: 480px;
-    object-fit: cover;
-    /* mantém o enquadramento da imagem */
-    border-radius: 50%;
-    /* deixa redonda */
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-    /* sombra suave */
-    transition: transform 0.3s ease;
+  width: 500px;
+  height: 480px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: none;
+  box-shadow: 0 0 40px rgba(6, 182, 212, 0.4), 0 0 80px rgba(168, 85, 247, 0.3), 0 10px 50px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* Efeito suave ao passar o mouse */
 .image-profile img:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
+  box-shadow: 0 0 60px rgba(6, 182, 212, 0.6), 0 0 120px rgba(168, 85, 247, 0.4), 0 15px 60px rgba(0, 0, 0, 0.6);
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
-    .image-profile img {
-        width: 140px;
-        height: 140px;
-    }
+  .image-profile img {
+    width: 140px;
+    height: 140px;
+  }
 }
 
 @media (max-width: 480px) {
-    .image-profile img {
-        width: 370px;
-        height: 320px;
-    }
+  .image-profile img {
+    width: 370px;
+    height: 320px;
+  }
+}
+
+/* About Section */
+.about {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #0a0e27 0%, #1a0b2e 50%, #0d1b2a 100%);
+}
+
+.about::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 80% 50% at 20% 40%, rgba(6, 182, 212, 0.35) 0%, transparent 50%),
+    radial-gradient(ellipse 60% 50% at 80% 60%, rgba(168, 85, 247, 0.4) 0%, transparent 50%),
+    radial-gradient(ellipse 70% 60% at 50% 80%, rgba(236, 72, 153, 0.3) 0%, transparent 50%);
+  animation: cosmicWaves1 15s ease-in-out infinite, glowPulse 3s ease-in-out infinite;
+  filter: blur(40px);
+  z-index: 0;
+}
+
+.about::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 70% 60% at 70% 30%, rgba(59, 130, 246, 0.3) 0%, transparent 50%),
+    radial-gradient(ellipse 80% 50% at 30% 70%, rgba(147, 51, 234, 0.4) 0%, transparent 50%),
+    radial-gradient(ellipse 60% 50% at 50% 50%, rgba(14, 165, 233, 0.25) 0%, transparent 50%);
+  animation: cosmicWaves2 20s ease-in-out infinite reverse, glowPulse 3s ease-in-out infinite 1.5s;
+  filter: blur(35px);
+  z-index: 0;
+}
+
+/* Gradiente de transição superior para suavizar a mudança com a seção acima */
+.about .gradient-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 150px;
+  background: linear-gradient(to bottom, rgba(10, 10, 10, 1) 0%, rgba(10, 10, 10, 0.8) 30%, transparent 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Gradiente de transição inferior para suavizar a mudança com a seção abaixo */
+.about .gradient-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 150px;
+  background: linear-gradient(to top, var( --color-surface) 0%, var( --color-surface) 30%, transparent 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Animações das ondas cósmicas */
+@keyframes cosmicWaves1 {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(-5%, 5%) scale(1.1);
+  }
+  66% {
+    transform: translate(5%, -5%) scale(0.9);
+  }
+}
+
+@keyframes cosmicWaves2 {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1) rotate(0deg);
+  }
+  50% {
+    transform: translate(-3%, 3%) scale(1.05) rotate(2deg);
+  }
+}
+
+@keyframes glowPulse {
+  0%,
+  100% {
+    opacity: 0.6;
+    filter: blur(40px) brightness(1);
+  }
+  50% {
+    opacity: 1;
+    filter: blur(35px) brightness(3);
+  }
 }
