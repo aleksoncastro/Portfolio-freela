@@ -719,6 +719,12 @@ body {
   }
 }
 
+@media (max-width: 480px){
+  .about-content p {
+    width: 230px;
+  }
+}
+
 /* Animações das ondas cósmicas */
 @keyframes cosmicWaves1 {
   0%,
