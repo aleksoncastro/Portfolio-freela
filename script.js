@@ -137,6 +137,13 @@ const galleries = [
     "./assets/lp_contabilidade/03.png",
     "./assets/lp_contabilidade/04.png",
     "./assets/lp_contabilidade/05.png"
+  ],
+  [
+    "./assets/advocacia/01.png",
+    "./assets/advocacia/02.png",
+    "./assets/advocacia/03.png",
+    "./assets/advocacia/04.png",
+    "./assets/advocacia/05.png"
   ]
 ];
 
