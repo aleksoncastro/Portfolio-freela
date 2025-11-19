@@ -526,6 +526,19 @@ body {
   font-size: 70px;
 }
 
+@media (max-width: 770px) {
+    .close {
+        top: 200px;
+        right: center;
+        font-size: 40px;   /* menor para telas pequenas */
+        z-index: 9999;     /* garante que fique acima da imagem */
+    }
+
+    .close:hover {
+        font-size: 55px;
+    }
+}
+
 .modal-controls {
     margin-top: 10px;
     display: flex;
